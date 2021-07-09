@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HRC</title>
+        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body id="body" onload="onstart()">
+        <div class="main">
+            <div>
+                <img onclick="location.reload()" id="abcProducts" src="../images/abcProducts.png" alt="abcProducts" width="289px" height="52px"/>
+                <a href="https://www.highradius.com/"><img id="logo" src="../images/logo.png" alt="logo"/></a>
+            </div>
+            <div>
+                <p style="color:aliceblue; font-size:120%;">Invoice List</p>
+            </div>
+            <div class="body1">
+                <div class="cont">
+                    <div class="divbut">
+                        <button id="buttonAdd"><i class="fa fa-plus" id="awesome" aria-hidden="true"></i><span id="sbutton">Add</span></button>
+                        <button id="buttonEdit" disabled="disabled"><i class="fas fa-pencil-alt" id="awesome" aria-hidden="true"></i><span id="sbutton">Edit</span></button>
+                        <button id="buttonDelete" disabled="disabled"><i class="fa fa-minus" id="awesome" aria-hidden="true"></i><span id="sbutton">Delete</span></button>
+                    </div>
+                    <div class="divser">
+                        <input type="search" id="searchInvo" class="search" placeholder="Enter invoice Id"/><i class="fa fa-search" aria-hidden="true" id="awesome"></i>
+                    </div>
+                </div><br/>
+                <div style="clear: both;flex-wrap: wrap; display: block;" id="divtab">
+                    <table id="table">
+                      <!--  <thead>
+                            <tr style="color: darkgrey;">
+                                <th><input type="checkbox" disabled="disabled"/></th>
+                                <th>Customer Name</th>
+                                <th>Customer#</th>
+                                <th>Invoice#</th>
+                                <th>Invoice Amount</th>
+                                <th>Due in Date</th>
+                                <th>Predicted Payment Date</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>-->
+                    </table>
+                    <button type="submit" id="butpage1" onclick="button1()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                    <button type="submit" id="butpage2" onclick="button2()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+
+            <!--Createing modal for Add invoice-->
+            <div id="addModal" class="modal">
+                <div class="addModal-content">
+                    <div class="addModal-header">
+                        <i class="fa fa-times" aria-hidden="true" id="addcloseModal"></i>
+                        <p style="color: aliceblue;">Add Invoice</p>
+                    </div>
+                    <hr/>
+                    <div class="addModal-body">
+                        <form id = "addForm">
+                            <div>
+                                <div id="addformdiv1">
+                                    <div class="block1">
+                                        <label for="custname" class="required-field">Customer Name</label>
+                                        <input type="text" id="custname" name="cname" required onchange="changecustName()"/>
+                                    </div>
+                                    <div class="block1">
+                                        <label for="custnum" class="required-field">Customer No.</label>
+                                        <input type="text" id="custnum" name="cnum" required onchange="changecustNo()"/>
+                                    </div>
+                                    <div class="block1">
+                                        <label for="invonum" class="required-field">Invoice No.</label>
+                                        <input type="number" id="invonum" name="inum" required onchange="changeinvoNum()"/>
+                                    </div>
+                                    <div class="block1">
+                                        <label for="invoamt" class="required-field">Invoice Amount</label>
+                                        <input type="number" id="invoamt" name="iamt" required onchange="changeinvoAmt()"/>
+                                    </div>
+                                </div>
+                                <div id="addformdiv2">
+                                    <div class="block2">
+                                        <label for="dueindate" class="required-field">Due Date</label>
+                                        <input type="date" id="dueindate" name="duedate" required onchange="changedueindate()"/>
+                                    </div>
+                                    <div class="block2">
+                                        <label for="note">Notes</label>
+                                        <textarea type="text" id="note" name="notes" onchange="changeNotes()"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div id="addbtnlast">
+                                <button id="afcancelbtn">Cancel</button>
+                                <button id="afaddbtn">Add</button>&nbsp;&nbsp;
+                                <button id="afclearbtn" onclick="addClear()">Clear</button>
+                            </div>
+                        </form>
+                        <div id="duplicate" style="color: #FF5E5E;"></div>
+                    </div>
+                </div>
+            </div>
+
+             <!--Createing modal for Edit-->
+
+
+             <div id="editModal" class="modal">
+                <div class="editModal-content">
+                    <div class="editModal-header">
+                        <i class="fa fa-times" aria-hidden="true" id="editcloseModal"></i>
+                        <p style="color: aliceblue;">Edit Invoice</p>
+                    </div>
+                    <hr/>
+                    <div class="editModal-body">
+                        <form>
+                            <div id="editform">
+                                <div class="block1">
+                                    <label for="editinvoamt">Invoice Amount</label>
+                                    <input type="number" id="editinvoamt" name="einvoamt" required onchange="changeeditinvoAmt()"/>
+                                </div>
+                                <div class="block1">
+                                    <label for="editnote">Notes</label>
+                                    <textarea type="text" id="editnote" name="notes" onchange="changeeditNotes()"></textarea>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div id="editbtnlast">
+                                <button id="efcancelbtn">Cancel</button>
+                                <button id="efsavebtn">Save</button>&nbsp;&nbsp;
+                                <button id="efresetbtn" onclick="editClear()">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Createing modal for Delete-->
+
+            <div id="deleteModal" class="modal">
+                <div class="deleteModal-content">
+                    <div class="deleteModal-header">
+                        <i class="fa fa-times" aria-hidden="true" id="deletecloseModal"></i>
+                        <p style="color: aliceblue;">Delete record(s)?</p>
+                    </div>
+                    <hr/>
+                    <div class="deleteModal-body">
+                        <p>You'll lose your record(s) after this action. We can't recover them once you delete.<br/>
+                            Are you sure you want to <span style="color:#FF5E5E">permanently delete</span> them?</p>
+                            <hr/>
+                        <div id="deletebtnlast">
+                            <button id="dfdeletebtn">Delete</button>&nbsp;&nbsp;
+                            <button id="dfcancelbtn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           <!-- <button id="modalBut" class="mbut">Click hear</button>
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="closeBtn">&times;</span>
+                        <h2>Modal Header</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Hello.. Modal</p>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>footer</h3>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <script src="../JS/index.js"></script>
+    </body>
+</html>

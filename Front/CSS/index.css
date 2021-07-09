@@ -1,0 +1,595 @@
+#body
+{
+    background-color: #58687E;
+}
+.main
+{
+    margin: 30px;
+}
+
+#logo
+{
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+.body1
+{
+    background-color: #273D49CC;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.cont
+{
+    padding-top: 1.5%;
+    float: right;
+    margin-right: 5%;
+}
+
+#buttonAdd
+{
+    width: 70px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    cursor: pointer;
+}
+#buttonAdd:hover
+{
+    opacity: 0.5;
+}
+
+
+#buttonEdit
+{
+    width: 70px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    cursor: pointer;
+}
+#buttonEdit:hover
+{
+    opacity: 0.5;
+}
+
+#buttonDelete
+{
+    width: 80px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    cursor: pointer;
+}
+#buttonDelete:hover
+{
+    opacity: 0.5;
+}
+#sbutton
+{
+    color: aliceblue;
+    padding: 5px;
+}
+#awesome
+{
+    color: aliceblue;
+}
+
+.search
+{
+    height: 35px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    position: relative;
+    color: aliceblue;
+}
+
+.divbut
+{
+    display: inline-block;
+}
+.divser
+{
+    display: inline-block;
+    position: relative;
+}
+
+.divser i{
+    position:absolute;
+    left: 80%;
+    padding:10px;
+    color:#30A3F1;
+}
+
+table{
+    width: 100%;
+    padding-top: 2%;
+    border-collapse: collapse;
+}
+th{
+    text-align: center;
+}
+tbody{
+    text-align: center;
+    color: aliceblue;
+}
+tr{
+    height: 35px;
+}
+
+tr:nth-child(even)
+{
+    background-color: #273D49CC;
+}
+
+tr:hover
+{
+    background-color:slategrey;
+    cursor: pointer;
+}
+
+td{
+    padding: 0;
+}
+
+#butpage1
+{
+    cursor: pointer;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color:#14AFF1;
+    color: aliceblue;
+    border: 1px solid;
+    border-color: #14AFF1;
+    position: fixed;
+    left: 25px;
+    top: 60%;
+}
+#butpage1:hover
+{
+    opacity: 0.5;
+}
+
+#butpage2
+{
+    cursor: pointer;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border-width: 1px;
+    background-color:#14AFF1;
+    color: aliceblue;
+    border: 1px solid;
+    border-color: #14AFF1;
+    position: fixed;
+    right: 25px;
+    top: 60%;
+}
+
+#butpage2:hover
+{
+    opacity: 0.5;
+}
+
+/*Add Modal*/
+
+.modal{
+    /*display: none;*/
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.addModal-content
+{
+    background-color:#2A3E4C;
+    margin: 20% auto;
+    width: 55%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 6px 7px 3px black;
+}
+
+@media screen and (max-width: 1229px) and (min-width: 1110px) {
+    .addModal-content 
+    {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1109px) and (min-width: 1025px){
+    .addModal-content 
+    {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .addModal-content 
+    {
+        width: 70%;
+    }
+}
+
+.addModal-header p{
+    color:#FFFFFF;
+    margin-left: 10px;
+    font-size: 120%;
+    height: 20px;
+}
+
+#addcloseModal
+{
+    color:white;
+    float: right;
+    margin-right: 15px;
+}
+
+#addcloseModal:hover,#addcloseModal:focus
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.addModal-body
+{
+    margin-left: 10px;
+    color:white;
+}
+#custname
+{
+    color: white;
+    height: 23px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+}
+
+#custnum
+{
+    color: white;
+    height: 23px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+}
+
+#invonum
+{
+    color: white;
+    height: 23px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+}
+
+#invoamt
+{
+    color: white;
+    height: 23px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+}
+
+#dueindate
+{
+    color: white;
+    height: 23px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+}
+
+#note
+{
+    color: white;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    vertical-align: middle;
+}
+
+label
+{
+    display: inline-block;
+    width: 140px;
+}
+.block1,.block2
+{
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#addformdiv1
+{
+    display: inline-block;
+}
+
+#addformdiv2
+{
+    float: right;
+}
+
+.required-field::after{
+    content:" *";
+    color: red;
+}
+
+#addbtnlast
+{
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+#afcancelbtn
+{
+    color:#14AFF1;
+    border: none;
+    background-color: #273D49CC;
+    cursor: pointer;
+}
+
+#afaddbtn
+{
+    width: 50px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #14AFF1;
+    cursor: pointer;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+#afclearbtn
+{
+    width: 50px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    cursor: pointer;
+    color: white;
+    float: right;
+}
+
+#afclearbtn:hover,#afaddbtn:hover,#afcancelbtn:hover
+{
+    opacity: 0.5;
+}
+
+/*Edit Modal*/
+
+.editModal-content
+{
+    background-color:#2A3E4C;
+    margin: 20% auto;
+    width: 30%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 6px 7px 3px black;
+}
+
+.editModal-header p{
+    color:#FFFFFF;
+    margin-left: 10px;
+    font-size: 120%;
+    height: 20px;
+}
+
+#editcloseModal
+{
+    color:white;
+    float: right;
+    margin-right: 15px;
+}
+
+#editcloseModal:hover,#editcloseModal:focus
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.editModal-body
+{
+    margin-left: 10px;
+    color:white;
+}
+
+#editbtnlast
+{
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+#efcancelbtn
+{
+    color:#14AFF1;
+    border: none;
+    background-color: #273D49CC;
+    cursor: pointer;
+}
+
+#efsavebtn
+{
+    width: 50px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #14AFF1;
+    cursor: pointer;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+#efresetbtn
+{
+    width: 50px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    cursor: pointer;
+    color: white;
+    float: right;
+}
+
+#efresetbtn:hover,#efsavebtn:hover,#efcancelbtn:hover
+{
+    opacity: 0.5;
+}
+
+#editinvoamt
+{
+    color: white;
+    height: 23px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+}
+
+#editnote
+{
+    color: white;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    vertical-align: middle;
+}
+
+/*Delete Modal*/
+
+.deleteModal-content
+{
+    background-color:#2A3E4C;
+    margin: 20% auto;
+    width: 30%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 6px 7px 3px black;
+}
+
+.deleteModal-header p{
+    color:#FFFFFF;
+    margin-left: 10px;
+    font-size: 120%;
+    height: 20px;
+}
+
+#deletecloseModal
+{
+    color:white;
+    float: right;
+    margin-right: 15px;
+}
+
+#deletecloseModal:hover,#deletecloseModal:focus
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.deleteModal-body
+{
+    margin-left: 10px;
+    color:white;
+}
+
+#deletebtnlast
+{
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+#dfdeletebtn
+{
+    width: 50px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #14AFF1;
+    cursor: pointer;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+#dfcancelbtn
+{
+    width: 55px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#14AFF1;
+    background-color: #273D49CC;
+    cursor: pointer;
+    color: white;
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+}
+
+#abcProducts:hover
+{
+    cursor: pointer;
+}
+
+hr{
+    border: 1px solid black;
+}
+
+/*.container
+#abcProducts
+{
+    display:inline;
+}
+.container 
+#logo
+{
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}*/
